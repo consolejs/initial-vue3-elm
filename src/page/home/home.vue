@@ -1,7 +1,8 @@
 <template>
 <div>
     <head-top signin-up='home'>
-        <span slot='logo' class="head_logo" @click="reload">ele.me</span>
+        <!--v-slot='logo'-->
+        <span class="head_logo" @click="reload">ele.me</span>
     </head-top>
     <nav class="city_nav">
         <div class="city_tip">
@@ -41,12 +42,12 @@
 </template>
 
 <script>
-import headTop from '../../components/header/head'
-import {
-    cityGuess,
-    hotcity,
-    groupcity
-} from '../../service/getData'
+import headTop from '../../components/header/head-test'
+// import {
+//     cityGuess,
+//     hotcity,
+//     groupcity
+// } from '../../service/getData'
 
 export default {
     data() {
@@ -60,20 +61,20 @@ export default {
 
     mounted() {
         // 获取当前城市
-        cityGuess().then(res => {
-            this.guessCity = res.name;
-            this.guessCityid = res.id;
-        })
+        // cityGuess().then(res => {
+        //     this.guessCity = res.name;
+        //     this.guessCityid = res.id;
+        // })
 
-        //获取热门城市
-        hotcity().then(res => {
-            this.hotcity = res;
-        })
+        // //获取热门城市
+        // hotcity().then(res => {
+        //     this.hotcity = res;
+        // })
 
-        //获取所有城市
-        groupcity().then(res => {
-            this.groupcity = res;
-        })
+        // //获取所有城市
+        // groupcity().then(res => {
+        //     this.groupcity = res;
+        // })
     },
 
     components: {
@@ -103,7 +104,7 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-@import '../../style/mixin';
+// @import '../../style/mixin';
 
 .head_logo {
     left: 0.4rem;
