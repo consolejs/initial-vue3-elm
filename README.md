@@ -1,4 +1,4 @@
-# vue3-elm
+# initial-vue3-elm
 
 ## Project setup
 ```

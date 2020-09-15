@@ -1,15 +1,17 @@
 {
-  "name": "vue3-elm",
+  "name": "initial-vue3-elm",
   "version": "0.1.0",
   "private": true,
   "scripts": {
-    "serve": "vue-cli-service serve",
-    "build": "vue-cli-service build",
+    "serve": "vue-cli-service serve  --mode development",
+    "local": "vue-cli-service serve  --mode local",
+    "build": "vue-cli-service build --mode production",
     "lint": "vue-cli-service lint"
   },
   "dependencies": {
     "core-js": "^3.6.5",
-    "vue": "^3.0.0-0"
+    "vue": "^3.0.0-rc.10",
+    "vue-router": "^4.0.0-alpha.4"
   },
   "devDependencies": {
     "@vue/cli-plugin-babel": "~4.5.0",
